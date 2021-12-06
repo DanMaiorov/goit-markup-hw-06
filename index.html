@@ -369,24 +369,42 @@
           <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
           <form action="#" class="modal-form">
             <div class="modal-field">
-              <label for="name">Имя</label>
-              <input class="modal-input" type="text" name="name" id="name" autofocus />
+              <label for="name" class="modal-input-text">Имя</label>
+              <input class="modal-input" type="text" name="name" id="name" required autofocus />
             </div>
             <div class="modal-field">
-              <label for="tel">Телефон</label>
-              <input class="modal-input" type="text" name="tel" id="tel" autofocus />
+              <label for="tel" class="modal-input-text">Телефон</label>
+              <input
+                class="modal-input"
+                type="tel"
+                minlength="2"
+                name="tel"
+                id="tel"
+                required
+                autofocus
+              />
             </div>
             <div class="modal-field">
-              <label for="mail">Почта</label>
-              <input class="modal-input" type="text" name="mail" id="mail" autofocus />
+              <label for="mail" class="modal-input-text">Почта</label>
+              <input class="modal-input" type="email" name="mail" id="mail" required autofocus />
             </div>
             <div class="modal-field">
-              <label for="comment">Комментарий</label>
-              <input class="modal-input" type="text" name="comment" id="comment" autofocus />
+              <label for="comment" class="modal-input-text">Комментарий</label>
+              <textarea name="comment" id="comment" class="modal-comment">Введите текст</textarea>
             </div>
             <div class="modal-field">
-              <input class="modal-input" type="checkbox" name="agree" id="agree" autofocus />
-              <label for="agree">Соглашаюсь с рассылкой и принимаю Условия договора</label>
+              <input
+                class="modal-input"
+                type="checkbox"
+                name="agree"
+                id="agree"
+                value="Соглашаюсь с рассылкой и принимаю Условия договора"
+                required
+                autofocus
+              />
+              <label for="agree" class="modal-input-text"
+                >Соглашаюсь с рассылкой и принимаю Условия договора</label
+              >
             </div>
             <button type="submit">Отправить</button>
           </form>
