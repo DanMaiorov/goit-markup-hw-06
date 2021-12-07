@@ -671,6 +671,11 @@ align-items: center;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close:hover {
+  fill: var(--accent-color);
 }
 
 .modal-title {
@@ -730,15 +735,19 @@ border: 1px solid rgba(33, 33, 33, 0.2);
 border-radius: 4px;
 outline: none;
 padding: 12px 16px;
-color: rgba(117, 117, 117, 0.5);
+/* color: rgba(117, 117, 117, 0.5); */
 resize: none;
+transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-comment:focus {
+  border-color: var(--accent-color);
 }
 
 .modal-input::placeholder .modal-comment::placeholder{
   font-size: 14px;
 line-height: 1.14;
 letter-spacing: 0.01em;
-
 color: rgba(117, 117, 117, 0.5);
 }
 
@@ -756,6 +765,60 @@ transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   margin: 0 auto;
   display: block;
 }
+
+.modal-check-text {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+  display: flex;
+    align-items: center;
+  justify-content: center;
+}
+
+.modal-check-text span {
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--title-text-color);
+  margin-right: 8.38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-check {
+  fill: var(--secondary-text-color);
+}
+
+.modal-check:checked + .modal-check-text span {
+  background-color: var(--accent-color);
+  border: none;
+}
+
+.modal-check-text {
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.policy-link {
+  color: var(--accent-color);
+}
+
+/* .modal-check-text::before {
+  content: '';
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--title-text-color);
+  margin-right: 8.38px;  
+}
+
+.modal-check:checked + .modal-check-text::before {
+  background-image: url(../images/check.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: none;
+} */
 
 /* Форма футера Подпишись */
 

@@ -405,20 +405,29 @@
             </div>
             <div class="modal-field">
               <label for="comment" class="modal-input-text">Комментарий</label>
-              <textarea name="comment" id="comment" class="modal-comment">Введите текст</textarea>
+              <textarea
+                name="comment"
+                id="comment"
+                class="modal-comment"
+                placeholder="Введите текст"
+              ></textarea>
             </div>
             <div class="modal-field">
               <input
-                class="modal-input"
+                class="modal-check visually-hidden"
                 type="checkbox"
-                name="agree"
-                id="agree"
+                name="policy"
+                id="modal-check"
                 value="Соглашаюсь с рассылкой и принимаю Условия договора"
                 required
                 autofocus
               />
-              <label for="agree" class="modal-input-text"
-                >Соглашаюсь с рассылкой и принимаю Условия договора</label
+              <label for="modal-check" class="modal-check-text"
+                ><span
+                  ><svg class="icon-check" width="16" height="15">
+                    <use href="./images/icons.svg#icon-check"></use></svg></span
+                >Соглашаюсь с рассылкой и принимаю&nbsp;
+                <a href="" class="policy-link">Условия договора</a></label
               >
             </div>
             <button type="submit" class="order-button modal-button">Отправить</button>
